@@ -9,4 +9,13 @@ public class Test {
 //	public void method1(){
 //		System.out.println("method1 of test class");
 //	}
+	
+	public void method1(){
+		System.out.println("method1 of test class");
+	}
+	
+	public void method2(){
+		System.out.println("methdo2 of test class");
+	}
+	
 }
