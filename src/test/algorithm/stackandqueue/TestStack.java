@@ -1,8 +1,8 @@
-package test.algorithm;
+package test.algorithm.stackandqueue;
 
 import java.util.Stack;
 
-public class Test {
+public class TestStack {
 	public static void main(String[] args) {
 //		System.out.println("main method of test class");
 		Stack<String> stack = new Stack<>();

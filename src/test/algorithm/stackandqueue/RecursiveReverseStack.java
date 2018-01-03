@@ -18,6 +18,16 @@ public class RecursiveReverseStack {
 		System.out.println("Reverse Stack : " + stack);
 	}
 	
+	public static void reverseStack(Stack<Integer> stack) {
+		if(stack.empty()) {
+			return;
+		}else {
+			int lastElement = getAndRemoveLastElement(stack);
+			reverseStack(stack);
+			stack.push(lastElement);
+		}
+	}
+	
 	public static int getAndRemoveLastElement(Stack<Integer> stack) {
 		int result = stack.pop();
 		if(stack.empty()) {
@@ -26,16 +36,6 @@ public class RecursiveReverseStack {
 			int lastElement = getAndRemoveLastElement(stack);
 			stack.push(result);
 			return lastElement;
-		}
-	}
-	
-	public static void reverseStack(Stack<Integer> stack) {
-		if(stack.empty()) {
-			return;
-		}else {
-			int lastElement = getAndRemoveLastElement(stack);
-			reverseStack(stack);
-			stack.push(lastElement);
 		}
 	}
 	
