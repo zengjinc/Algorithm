@@ -7,7 +7,7 @@ import java.util.Stack;
  * @param <T>
  * 用两个栈实现队列的功能
  * 注意： ① stackPush 往 stackPop 中压入数据，必须一次性把 stackPush 中的数据全部压入
- * 	    ② 如果 stackPop 不为空，那么 stackPush 不能向 stackPop 中压入数据
+ * 	     ② 如果 stackPop 不为空，那么 stackPush 不能向 stackPop 中压入数据
  */
 public class TwoStackQueue<T> {
 	private Stack<T> stackPush;
