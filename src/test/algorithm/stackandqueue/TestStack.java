@@ -12,6 +12,7 @@ public class TestStack {
 		
 		System.out.println("stack : " + stack);
 		
+		
 //		System.out.println("pop : " + stack.pop());
 //		System.out.println("stack : " + stack);
 		
