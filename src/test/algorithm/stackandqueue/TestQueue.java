@@ -13,6 +13,12 @@ public class TestQueue {
 		Queue<String> queue = new LinkedList<String>();
 		LinkedList<String> linkedList = new LinkedList<String>();
 		System.out.println(linkedList instanceof Queue);
+		
+		linkedList.addLast("s2");
+		linkedList.addFirst("s1");
+		System.out.println(linkedList);
+		System.out.println(linkedList.peekFirst());
+		System.out.println(linkedList);
 //		queue.enqueue("cat1");
 //		queue.enqueue("dog1");
 //		queue.enqueue("cat2");
