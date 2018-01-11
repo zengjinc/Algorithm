@@ -1,5 +1,7 @@
 package test.algorithm.linkedlist;
 
+import test.algorithm.linkedlist.datastructure.SingleListNode;
+
 /**
  * 
  * @author zengjinc

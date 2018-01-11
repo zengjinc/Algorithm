@@ -1,4 +1,4 @@
-package test.algorithm.linkedlist;
+package test.algorithm.linkedlist.datastructure;
 
 public class SingleListNode{
 	public int value;

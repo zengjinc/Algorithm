@@ -3,6 +3,8 @@ package test.algorithm.linkedlist;
 import java.util.LinkedList;
 import java.util.Stack;
 
+import test.algorithm.linkedlist.datastructure.SingleListNode;
+
 /**
  * 
  * @author zengjinc

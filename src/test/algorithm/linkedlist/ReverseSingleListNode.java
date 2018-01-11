@@ -1,5 +1,15 @@
 package test.algorithm.linkedlist;
 
+import test.algorithm.linkedlist.datastructure.SingleListNode;
+
+/**
+ * 
+ * @author zengjinc
+ *
+ * 反转单链表
+ * 
+ * 时间复杂度为 O（n），空间复杂度为 O（1）
+ */
 public class ReverseSingleListNode {
 	public static void main(String[] args) {
 		SingleListNode head = new SingleListNode(1);
@@ -10,8 +20,10 @@ public class ReverseSingleListNode {
 		node2.next = node3;
 		
 		ReverseSingleListNode reverseSingleListNode = new ReverseSingleListNode();
+		System.out.println("single list node : " + head);
 		
-		reverseSingleListNode.reverseNode(head);
+		SingleListNode newHead = reverseSingleListNode.reverseNode(head);
+		System.out.println("reverse single list node : " + newHead);
 	}
 	
 	public SingleListNode reverseNode(SingleListNode head) {
@@ -20,13 +32,12 @@ public class ReverseSingleListNode {
 		while(head != null) {
 			next = head.next;
 			head.next = pre;
-			next.next = head;
 			pre = head;
 			head = next;
 		}
-		System.out.println("pre : " + pre);
-		System.out.println("head : " + head);
-		System.out.println("next : " + next);
-		return head;
+//		System.out.println("pre : " + pre);
+//		System.out.println("head : " + head);
+//		System.out.println("next : " + next);
+		return pre;
 	}
 }
