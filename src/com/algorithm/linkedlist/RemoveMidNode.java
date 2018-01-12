@@ -1,8 +1,8 @@
-package test.algorithm.linkedlist;
+package com.algorithm.linkedlist;
 
 import java.util.LinkedList;
 
-import test.algorithm.linkedlist.datastructure.SingleListNode;
+import com.algorithm.linkedlist.datastructure.SingleListNode;
 
 /**
  * 

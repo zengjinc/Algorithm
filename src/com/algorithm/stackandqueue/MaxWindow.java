@@ -1,4 +1,4 @@
-package test.algorithm.stackandqueue;
+package com.algorithm.stackandqueue;
 
 import java.util.LinkedList;
 /**

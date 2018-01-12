@@ -1,4 +1,4 @@
-package test.algorithm.lintcode;
+package com.algorithm.lintcode;
 
 import java.util.HashMap;
 import java.util.Stack;

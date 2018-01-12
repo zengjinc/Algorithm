@@ -1,4 +1,4 @@
-package test.algorithm.linkedlist.datastructure;
+package com.algorithm.linkedlist.datastructure;
 
 public class DoubleListNode {
 	public int value;

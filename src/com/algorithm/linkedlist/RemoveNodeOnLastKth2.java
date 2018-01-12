@@ -1,9 +1,9 @@
-package test.algorithm.linkedlist;
+package com.algorithm.linkedlist;
 
 import java.util.LinkedList;
 import java.util.Stack;
 
-import test.algorithm.linkedlist.datastructure.DoubleListNode;
+import com.algorithm.linkedlist.datastructure.DoubleListNode;
 
 /**
  * 

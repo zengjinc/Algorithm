@@ -1,4 +1,4 @@
-package test.algorithm.stackandqueue;
+package com.algorithm.stackandqueue;
 
 public class Hanoi {
     /**
@@ -21,7 +21,7 @@ public class Hanoi {
  
     public static void main(String[] args) {
         Hanoi hanoi = new Hanoi();
-        hanoi.hanoi(3, "left", "mid", "right");
+        hanoi.hanoi(4, "left", "mid", "right");
     }
     
     public void hanoi(int num, String left, String mid, String right) {

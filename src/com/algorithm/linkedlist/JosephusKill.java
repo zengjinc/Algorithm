@@ -1,6 +1,6 @@
-package test.algorithm.linkedlist;
+package com.algorithm.linkedlist;
 
-import test.algorithm.linkedlist.datastructure.SingleListNode;
+import com.algorithm.linkedlist.datastructure.SingleListNode;
 
 /**
  * 
@@ -14,6 +14,8 @@ import test.algorithm.linkedlist.datastructure.SingleListNode;
  * 返回：最后生存下来的节点，且这个节点自己组成环形单向链表，其他节点都删除掉。
  * 
  * 进阶：要求时间复杂度为 O(N)
+ * 
+ * 
  * 
  */
 public class JosephusKill {
@@ -31,7 +33,8 @@ public class JosephusKill {
 		int m = 3;
 		
 		JosephusKill josephusKill = new JosephusKill();
-		SingleListNode newHead = josephusKill.josephusKill(head, m);
+//		SingleListNode newHead = josephusKill.josephusKill(head, m);
+		SingleListNode newHead = josephusKill.josephusKill2(head, m);
 		
 		System.out.println();
 		
@@ -41,8 +44,8 @@ public class JosephusKill {
 		
 		int kill = 0;
 		
-		if(m < 1) {
-			System.out.println("err : " + m + " illegal");
+		if(m < 1 || head == null) {
+			System.out.println("err : " + m + " illegal or SingleListNode is empty");
 			return head;
 		}
 		
@@ -57,4 +60,41 @@ public class JosephusKill {
 		System.out.println("survive : " + head.value);
 		return head;
 	}
+	
+public SingleListNode josephusKill2(SingleListNode head, int m) {
+		int len = 1;
+		
+		if(m < 1 || head == null) {
+			System.out.println("err : " + m + " illegal or SingleListNode is empty");
+			return head;
+		}
+		
+		SingleListNode cur = head;
+		while(cur.next != head) {
+			len++;
+			cur = cur.next;
+		}
+		
+		len = getLive(len, m);
+		
+		while(--len != 0) {
+			head = head.next;
+		}
+		head.next = head;
+		System.out.println("survive : " + head.value);
+		
+		return head;
+	}
+
+/*
+ * @param i : Num(i),当链表长度为 i 的时候，生存节点的节点编号
+ * @return : 生存节点在当前链表中的编号	
+ */
+public int getLive(int i, int m) {
+	if(i == 1) {
+		return 1;
+	}
+	return(getLive(i - 1, m) + m - 1) % i + 1;
+}
+
 }
